@@ -1,0 +1,5 @@
+GEOMETRY,Geometry_ID,English,Angle_from_vertical
+Vertical,0,Vertical,~0
+Horizontal,2,Horizontal,>85
+Dirigido,1,Deviated,5 to 85
+Not reported,99,Not reported type 1,Not applicable

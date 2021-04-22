@@ -1,0 +1,27 @@
+ROCK,FM_ID,EXPLANATION,Resource,Importance,Extent
+TORD,22,Tordillo,CO,3,100%
+VMUT,23,Vaca Muerta,SH,1,70%
+QTUC,19,Quintuco,FR,6,60%
+GNEU,8,Grupo Neuquen,CO,4,100%
+FIMP,7,UNK-Impermeable,TI,10,0%
+LOTE,13,Lotena,CO,6,50%
+PREC,16,Precuyo,CO,8,100%
+LAJA,10,Las Lajas,TI,2,90%
+QDSA,18,Quebrada del Sapo,TI,8,10%
+Not reported,99,Not reported type1,Not applicable,98,0%
+OTRO,15,Other,unknown,99,0%
+HUIT,9,Huitrin,CO,4,30%
+LMOL,11,Los Molles,SH,7,100%
+Not reported,24,Not reported 2,Not applicable,97,0%
+CENT,4,Centenario,CO,4,60%
+RAYO,20,Rayoso,CO,3,40%
+AGRI,0,Agrio,SH,2,20%
+MULI,14,Mulichinco,TI,5,90%
+LOMO,12,Loma Montosa,CO,6,20%
+SBLA,21,Sierras Blancas,CO,3,10%
+PROS,17,Punta Rosada,CO,2,30%
+CHLL,5,Challaco,CO,9,5%
+BASA,2,Basement,FR,9,100%
+CATR,3,Catriel,CO,3,5%
+CHYO,6,Choiyoi,FR,9,75%
+BACO,1,Basement Complex,FR,9,15%

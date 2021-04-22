@@ -1,0 +1,5 @@
+RESOURCE_TYPE,RID,R_NAME,Seal,Mechanism,Porosity
+CO,0,Conventional,Yes,Buoyancy,>15%
+SH,1,Shale,No,Capillary Trap,<10%
+TI,2,Tight,No,Mixed,<15%
+UNK,4,Not reported,Unknown,Unknown,Not applicable
