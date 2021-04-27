@@ -23,14 +23,20 @@ def home():
     # Return template and data
     return render_template("index.html")
 
-@app.route("/wellMaps")
+@app.route("/maps")
 def maps():
     # return template and dat
     return render_template("maps.html")
 
-@app.route("/")
+@app.route("/data filter")
 
-@app.route("/makePredictions", methods=["POST"])
+@app.route("/calculate properties")
+
+@app.route("/make a contour map")
+
+@app.route("/about and references")
+
+@app.route("/makePrediction", methods=["POST"])
 def makePredictions():
     content = request.json["data"]
 
