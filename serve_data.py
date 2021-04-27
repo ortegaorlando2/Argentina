@@ -28,13 +28,24 @@ def maps():
     # return template and dat
     return render_template("maps.html")
 
-@app.route("/data filter")
+@app.route("/filter")
+def filter():
+    # return template and dat
+    return render_template("filter.html")
+@app.route("/calculate")
+def calculate():
+    # return template and dat
+    return render_template("calculate.html")
 
-@app.route("/calculate properties")
+@app.route("/contour")
+def contour():
+    # return template and dat
+    return render_template("contour.html")
 
-@app.route("/make a contour map")
-
-@app.route("/about and references")
+@app.route("/about")
+def about():
+    # return template and dat
+    return render_template("about.html")
 
 @app.route("/makePrediction", methods=["POST"])
 def makePredictions():
