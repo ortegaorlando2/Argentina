@@ -36,9 +36,9 @@ function makePredictions() {
             console.log(returnedData);
 
             if (returnedData["prediction"] == 1) {
-                $("#output").text("You Survived!");
+                $("#output").text("You found Oil!");
             } else {
-                $("#output").text("You Died!");
+                $("#output").text("You are fired!");
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
