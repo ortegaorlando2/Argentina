@@ -1,3 +1,9 @@
+$.ajax({
+	url: 'TopTordillo_ed.csv',
+	dataType: 'text',
+  }).done(successFunction);
+
+
 var data = [ {
 	z: [[10, 10.625, 12.5, 15.625, 20],
 		 [5.625, 6.25, 8.125, 11.25, 15.625],
