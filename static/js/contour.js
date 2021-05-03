@@ -1,23 +1,26 @@
-var size = 100, x = new Array(size), y = new Array(size), z = new Array(size), i, j;
-
-for(var i = 0; i < size; i++) {
-	x[i] = y[i] = -2 * Math.PI + 4 * Math.PI * i / size;
-  	z[i] = new Array(size);
-}
-
-for(var i = 0; i < size; i++) {
-  	for(j = 0; j < size; j++) {
-    	var r2 = x[i]*x[i] + y[j]*y[j];
-    	z[i][j] = Math.sin(x[i]) * Math.cos(y[j]) * Math.sin(r2) / Math.log(r2+1);
- 	}
-}
-
 var data = [ {
-		z: z,
-		x: x,
-		y: y,
-		type: 'contour'
+	z: [[10, 10.625, 12.5, 15.625, 20],
+		 [5.625, 6.25, 8.125, 11.25, 15.625],
+		 [2.5, 3.125, 5., 8.125, 12.5],
+		 [0.625, 1.25, 3.125, 6.25, 10.625],
+		 [0, 0.625, 2.5, 5.625, 10]],
+	type: 'contour',
+	colorbar:{
+	  ticks: 'outside',
+	  dtick: 1,
+	  tickwidth: 2,
+	  ticklen: 10,
+	  tickcolor: 'grey',
+	  showticklabels: true,
+	  tickfont: {
+		size: 15
+	  },
+	  xpad: 50
 	}
-];
-
-Plotly.newPlot('myDiv', data);
+  }];
+  
+  var layout = {
+	title: 'Styling Color Bar Ticks for Contour Plots'
+  };
+  
+  Plotly.newPlot('myDiv', data, layout);
