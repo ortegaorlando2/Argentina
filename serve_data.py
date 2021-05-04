@@ -7,8 +7,8 @@ from modelHelper import ModelHelper
 
 #init app and class
 app = Flask(__name__)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-modelHelper = ModelHelper()
+# app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+# modelHelper = ModelHelper()
 
 #endpoint
 # Favicon
@@ -42,22 +42,27 @@ def contour():
     # return template and dat
     return render_template("contour.html")
 
+@app.route("/Wells")
+def wellsummary():
+    # return template and dat
+    return render_template("Wells.html")
+
 @app.route("/about")
 def about():
     # return template and dat
     return render_template("about.html")
 
-@app.route("/makePrediction", methods=["POST"])
-def makePredictions():
-    content = request.json["data"]
+# @app.route("/makePrediction", methods=["POST"])
+# def makePredictions():
+#     content = request.json["data"]
 
-    # parse
-    sex_flag = int(content["sex_flag"])
-    age = float(content["age"])
-    fare = float(content["fare"])
-    familySize = int(content["familySize"])
-    p_class = int(content["p_class"])
-    embarked = content["embarked"]
+#     # parse
+#     sex_flag = int(content["sex_flag"])
+#     age = float(content["age"])
+#     fare = float(content["fare"])
+#     familySize = int(content["familySize"])
+#     p_class = int(content["p_class"])
+#     embarked = content["embarked"]
 
     # #dummy data
     # sex_flag = 1
@@ -67,9 +72,9 @@ def makePredictions():
     # p_class = 1
     # embarked = "C"
 
-    prediction = modelHelper.makePredictions(sex_flag, age, fare, familySize, p_class, embarked)
-    print(prediction)
-    return(jsonify({"ok": True, "prediction": str(prediction)}))
+    # prediction = modelHelper.makePredictions(sex_flag, age, fare, familySize, p_class, embarked)
+    # print(prediction)
+    # return(jsonify({"ok": True, "prediction": str(prediction)}))
 
 ####################################
 # ADD MORE ENDPOINTS
@@ -78,17 +83,17 @@ def makePredictions():
 
 #############################################################
 
-@app.after_request
-def add_header(r):
-    """
-    Add headers to both force latest IE rendering engine or Chrome Frame,
-    and also to cache the rendered page for 10 minutes.
-    """
-    r.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
-    r.headers["Pragma"] = "no-cache"
-    r.headers["Expires"] = "0"
-    return r
+# @app.after_request
+# def add_header(r):
+#     """
+#     Add headers to both force latest IE rendering engine or Chrome Frame,
+#     and also to cache the rendered page for 10 minutes.
+#     """
+#     r.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+#     r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
+#     r.headers["Pragma"] = "no-cache"
+#     r.headers["Expires"] = "0"
+#     return r
 
 #main
 if __name__ == "__main__":
