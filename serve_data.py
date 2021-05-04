@@ -42,10 +42,10 @@ def contour():
     # return template and dat
     return render_template("contour.html")
 
-@app.route("/Wells")
+@app.route("/makePrediction")
 def wellsummary():
     # return template and dat
-    return render_template("Wells.html")
+    return render_template("makePrediction.html")
 
 @app.route("/about")
 def about():
